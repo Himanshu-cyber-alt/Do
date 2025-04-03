@@ -1,0 +1,9 @@
+// summary of callBack
+
+
+Function	                       Callback                    	Purpose
+passport.use()               	done(err, user, info)	      Authenticates user
+passport.serializeUser()      	done(err, userId)	          Stores user in session
+passport.deserializeUser()  	done(err, user)	               Fetches user from DB
+passport.authenticate()	        (err, user, info) => {}    	Handles login success/failure
+req.logIn()	(err) => {}	                                    Logs in user after authentication

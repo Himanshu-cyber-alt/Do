@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Student Evaluation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-semibold text-center">Student Login</h2>
+        <form action="/login" method="POST" class="mt-4 space-y-4">
+            <input type="text" name="RollNumber" placeholder="Enter Roll Number" class="w-full border p-2 rounded" required>
+            <input type="password" name="Password" placeholder="Enter Password" class="w-full border p-2 rounded" required>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+        </form>
+        <div class="mt-4 text-center">
+            <a href="#" class="text-blue-600 hover:underline">Forgot Password?</a> |
+            <a href="/register" class="text-blue-600 hover:underline">Register Now</a>
+        </div>
+    </div>
+</body>
+</html>

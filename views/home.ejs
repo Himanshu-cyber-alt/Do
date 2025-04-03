@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+	<style type="text/css">
+		* {
+			text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+		}
+
+        body {
+            background: url('pisa112.jpg') no-repeat center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+			background-color: gray;
+        }
+
+		.navbar {
+			background: rgba(0, 0, 0, 0.445);
+            font-family: calibri;
+            padding: 10px 15px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+		}
+
+		.navdiv {
+			display: flex;
+            align-items: center;
+            justify-content: space-between;
+		}
+
+		.logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: whitesmoke;
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		li a, button {
+			background-color: black;
+			margin-left: 10px;
+			border-radius: 10px;
+			padding: 10px 20px;
+			color: white;
+			font-weight: bold;
+			font-size: 15px;
+			border: none;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		li a:hover, button:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		button a {
+			color: white;
+			font-weight: bold;
+			font-size: 15px;
+		}
+
+        /* Centering "Create Profile" and "Compare" */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .center-links a {
+            display: block;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 15px 0;
+            border-radius: 10px;
+            width: 200px;
+            transition: 0.3s;
+        }
+
+        .center-links a:hover {
+            background-color: green;
+        }
+
+	</style>
+</head>
+<body>
+
+	<nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">Student Evaluation</a></div>
+			<ul>
+				<li><a href="/home">Home</a></li>
+			    <li><a href="/about">About</a></li>
+                <button><a href="/logout">Logout</a></button>
+			</ul>
+		</div>
+	</nav>
+
+    <div class="container">
+        <div class="center-links">
+            <a href="/profile">Create Profile</a>
+			<a href="/calculate">Calculate Cgpa</a>
+            <a href="/compare">Compare</a>
+        </div>
+    </div>
+
+</body>
+</html>

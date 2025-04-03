@@ -1,0 +1,32 @@
+  try{
+    const {RollNumber,Password} = req.body;
+
+    const result = await pool.query('select roll_number,password from students where roll_number = $1',[RollNumber])
+    const roll = result.rows[0].roll_number;
+    const DataBasePass = result.rows[0].password;
+
+          
+     bcrypt.compare(Password,DataBasePass,(err,result)=>{
+
+        if(err){
+         console.log(err)
+        }else{
+
+            if(result){
+                res.render('about.ejs')
+            }else{
+                res.render('register.ejs')
+            }
+        }
+     })
+
+
+       
+    
+     
+
+} catch(error){
+    console.log(error);
+    res.status(500).send("Error for register"); 
+}
+ 
