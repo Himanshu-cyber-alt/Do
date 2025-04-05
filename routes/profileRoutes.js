@@ -5,6 +5,17 @@ import pool from '../config/db.js';
 
 const router = express.Router();
 
+pool.query(`CREATE TABLE IF NOT EXISTS student_profiles (
+  id SERIAL PRIMARY KEY,
+  semester TEXT NOT NULL,
+  branch TEXT NOT NULL,
+  cgpa REAL,
+  sgpa REAL,
+  courses TEXT[],
+  skills TEXT[]
+);`)
+
+
 router.post('/create-profile', async (req, res) => {
     const { Semester, Branch, Cgpa, Sgpa, Courses, Skills } = req.body;
 
